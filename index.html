@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Weather App</h1>
+
+<div class="tabcontainer">
+    <p class="tab" data-userweather>Your Weather</p>
+    <p class="tab" data-searchweather>Search Weather</p>
+</div>
+
+<div class="weathercontainer">
+
+    <!-- grant location -->
+     <div class="subcontainer grantlocationcontainer">
+        <img src="./assets/location.png" alt="" width="80" height="80" loading="lazy">
+<p>Grant Location Access</p>
+<p>Allow Access to get weather Information</p>
+<button class="btn" data-grantaccess>Grant Access</button>
+
+     </div>
+
+     <!-- search form -->
+      <form class="formcontainer" data-searchform>
+        <input placeholder="Search for City ..." data-searchinput>
+        
+        <button class="btn" type="submit">
+            <img src="./assets/search.png" width="20" height="20" loading="lazy">
+        </button>
+      </form>
+
+
+      <!--  loading screen containe-> -->
+        <div class=" subcontainer loadingcontainer">
+            <img src="./assets/loading.gif"  alt="" width="150" height="150" loading="lazy">
+            <p>loading</p>
+        </div>
+
+
+        <!-- show weather info -->
+         <div class="subcontainer userinforcontainer">
+            <!-- city name and flag -->
+            <div class="name">
+                <p data-cityname></p>
+                <img data-countryicon>
+            </div>
+
+            <!-- weather descrisption -->
+             <p data-weatherdesc></p>
+             <!-- weather icon -->
+              <p data-weathericon></p>
+              <!-- temprature -->
+               <p data-temp></p>
+
+               <!-- 3 cards - parameters -->
+                <div class="parameterconatiner">
+
+                    <!-- card 1  -->
+
+                    <div class="parameter">
+                        <img src="./assets/wind.png" alt="">
+                        <p>Windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+
+                    <!-- card 2 -->
+                     <div class="parameter">
+                        <img src="./assets/humidity.png" alt="">
+                        <p>humidity</p>
+                        <p data-humidity></p>
+
+                     </div>
+
+                     <!-- card 3  -->
+                      <div class="parameter">
+                        <img src="./assets/cloud.png" alt="">
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                      </div>
+                </div>
+         </div>
+
+
+         <div class="errorcontainer">
+            <img src="./assets/not-found.png" alt="">
+         </div>
+
+</div>
+
+
+
+
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

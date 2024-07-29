@@ -1,0 +1,268 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+font-family: "IBM Plex Sans", sans-serif;
+font-weight: 100;
+font-style: normal;
+}
+:root{
+    --colorDark1:#112D4E;
+    --colorDark2:#3f72AF;
+    --colorLight1:#DBE3EF;
+    --colorLight2:#F9F7F7;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg,#112d4e 0%, #3f72af 100%);
+}
+ h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+ }
+ 
+.tabcontainer{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+.weathercontainer{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;*/
+    margin-block: 4rem; 
+
+}
+
+.tab.currenttab{
+background-color: rgb(219, 226,239,0.5);
+border-radius: 4px;
+}
+
+
+.btn{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+
+}
+
+
+.subcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.grantlocationcontainer{
+    display: none;
+}
+.grantlocationcontainer.active{
+    display: flex;
+}
+
+.grantlocationcontainer img{
+margin-bottom: 2rem;
+
+}
+
+.grantlocationcontainer p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+
+}
+.grantlocationcontainer p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    max-block-size: 1.75rem;
+    letter-spacing: 0.24px;
+}
+
+
+
+.loadingcontainer{
+    display: none;
+}
+.loadingcontainer.active{
+    display: flex;
+}
+.loadingcontainer p{
+    text-transform: uppercase;
+}
+
+
+
+.userinforcontainer{
+    display: none;
+}
+.userinforcontainer.active{
+    display: flex;
+    /* flex-direction: row; */
+}
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.userinforcontainer p {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.userinforcontainer img{
+    width: 90px;
+    height: 90px;
+}
+
+
+.name p{
+    font-size: 2rem;
+
+}
+.name img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+
+}
+.userinforcontainer p[data-temp]{
+    font-size: 2.75rem;
+    font-weight: 700;
+
+}
+.parameterconatiner{
+    width: 90%;
+display: flex;
+/* flex-direction: row; */
+gap: 10px 20px;
+justify-content: center;
+align-items: center;
+margin-top: 2rem;
+
+
+}
+.parameter{
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(219, 226,283,0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    /* justify-content: space-between; */
+    align-items: center;
+
+}
+
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+.parameter p:first-of-type{
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    font-weight: 600;
+
+}
+.parameter p:last-of-type{
+font-size: 1rem;
+font-weight: 200;
+}
+.formcontainer{
+    display: none;
+    /* all: unset; */
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap:  0 10px;
+    margin-bottom: 3rem ;
+}
+
+.formcontainer.active{
+    display: flex;
+}
+
+.formcontainer input{
+     all:unset;
+     width: calc(100% - 80px);
+    width: 10rem;
+    height:40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+
+}
+
+.formcontainer input::placeholder{
+    color: rgba(255,255,255, 0.7);
+}
+.formcontainer input:focus{
+outline: 3px solid rgba(255, 255,255,0.7);
+}
+
+.formcontainer {
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+.errorcontainer {
+    /* color: red; */
+    /* font-weight: bold; */
+    margin-top: 8rem;
+    margin-left: 40rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    /* display: flex; */
+    width: 10rem;
+    scale: 23%;
+    
+    display: none;
+}
+
+.errorcontainer.active {
+    display: flex;
+}
